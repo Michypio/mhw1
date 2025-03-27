@@ -1,0 +1,452 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: darkblue; 
+    color: white;
+    width: 100%;
+    padding: 30px 30px;
+    height: 600px;
+    background-image: url('sfondo.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.header-left {
+    display: flex;
+    gap: 40px;
+}
+
+.header-left a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.header-left a:hover {
+    text-decoration: underline;
+}
+
+.header-center {
+    flex-grow: 1;
+    text-align: center;
+}
+.header img{
+    width: 100px;
+    height: auto;
+}
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+.header-right {
+    display: flex;
+    gap: 40px;
+}
+
+.header-right a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.header-right a:hover {
+    text-decoration: underline;
+}
+
+.search-icon {
+    font-size: 1.5rem;
+}
+
+.notizie {
+    background-color: black;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.notizie h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.notizie-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.notizia {
+    flex: 0 0 auto;
+    width: 250px;
+    background-color: black;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.notizia img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.notizia p {
+    color: white;
+    font-size: 1.1rem;
+}
+
+
+.shop {
+    background-color: black;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.shop h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.shop-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.prodotto {
+    flex: 0 0 auto;
+    width: 250px;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.prodotto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.prodotto h3 {
+    font-size: 1.3rem;
+    margin: 10px 0;
+}
+
+.prodotto p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.prodotto button {
+    padding: 10px 15px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.prodotto button:hover {
+    background-color: black;
+}
+
+.albo {
+    background-color:darkblue;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.albo h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.albo-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    overflow: hidden;
+    flex-wrap: nowrap;
+}
+
+.trofeo {
+    text-align: center;
+    padding: 20px;
+}
+
+.trofeo img {
+    width: 100px;
+    height: 150px;
+    margin-bottom: 10px;
+    object-fit: contain; 
+}
+
+.trofeo h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.trofeo ul {
+    list-style: none;
+    padding: 0;
+}
+
+.trofeo ul li {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+}
+
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 20px;
+        height: 400px; 
+        background-size: cover;
+        background-position: center;
+    }
+
+    .header-left, .header-right {
+        display: none;
+    }
+
+    .header-center {
+        text-align: center;
+        padding: 10px 0;
+    }
+    
+    .header img {
+        width: 70px;
+    }
+
+    .notizie-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    .notizia {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+    }
+    
+    .shop-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    .prodotto {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 15px;
+    }
+
+    .prodotto img {
+        width: 100%;
+        height: auto;
+        max-height: 180px;
+        object-fit: contain;
+    }
+
+    .albo-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+        padding: 0 15px;
+    }
+
+    .trofeo {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 10px;
+    }
+    
+    .trofeo img {
+        width: 70px;
+        height: 100px;
+        object-fit: contain;
+    }
+    
+    .trofeo h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        height: 350px;
+    }
+    
+    .header-left, .header-right {
+        gap: 8px;
+    }
+    
+    .header-left a, .header-right a {
+        font-size: 0.85rem;
+        padding: 4px 6px;
+    }
+    
+    .notizie-container, .shop-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .albo-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .notizie h2, .shop h2, .albo h2 {
+        font-size: 1.7rem;
+    }
+
+    .prodotto img {
+        max-height: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px;
+        height: 300px;
+    }
+
+    .header-left a, .header-right a {
+        font-size: 0.8rem;
+        padding: 3px 5px;
+    }
+    
+    .header img {
+        width: 60px;
+    }
+
+    .notizie h2, .shop h2, .albo h2 {
+        font-size: 1.5rem;
+    }
+
+    .albo-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .trofeo {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        padding: 10px 20px;
+    }
+    
+    .trofeo img {
+        width: 60px;
+        height: 80px;
+        margin-right: 20px;
+        margin-bottom: 0;
+        object-fit: contain;
+    }
+    
+    .prodotto {
+        padding: 12px;
+    }
+
+    .prodotto img {
+        max-height: 140px;
+    }
+    
+    .prodotto h3 {
+        font-size: 1.1rem;
+    }
+    
+    .prodotto p {
+        font-size: 1rem;
+    }
+    
+    .prodotto button {
+        padding: 8px 12px;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 350px) {
+    .header {
+        height: 250px;
+    }
+    
+    .header-left, .header-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    .header-left a, .header-right a {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .notizia p, .trofeo h3 {
+        font-size: 0.9rem;
+    }
+    
+    .trofeo img {
+        width: 50px;
+        height: 70px;
+        object-fit: contain;
+    }
+
+    .prodotto img {
+        max-height: 120px;
+    }
+}
+
+
+@media (min-width: 769px) {
+    .header:hover {
+        background-image: url('vittoria.webp');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .header:hover .header-left a,
+    .header:hover .header-right a {
+        color: black;
+    }
+}
